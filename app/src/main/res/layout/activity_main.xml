@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kenzie.blackjack.MainActivity">
+
+    <ImageView
+        android:id="@+id/computerCard1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/scoreTextView1"
+        android:layout_alignLeft="@+id/scoreTextView2"
+        android:layout_alignStart="@+id/scoreTextView2" />
+
+    <ImageView
+        android:id="@+id/computerCard2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_alignTop="@+id/computerCard1"
+        android:layout_alignLeft="@+id/playerCard2"
+        android:layout_alignStart="@+id/playerCard2" />
+
+    <ImageView
+        android:id="@+id/playerCard1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginBottom="71dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/computerCard1"
+        android:layout_alignStart="@+id/computerCard1" />
+
+    <ImageView
+        android:id="@+id/playerCard2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_alignTop="@+id/playerCard1"
+        android:layout_toRightOf="@+id/playerCard1"
+        android:layout_toEndOf="@+id/playerCard1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:onClick="drawClicked"
+        android:text="Draw"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/playerCard3"
+        android:layout_alignStart="@+id/playerCard3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="holdClicked"
+        android:text="Hold"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/playerCard4"
+        android:layout_alignStart="@+id/playerCard4" />
+
+    <TextView
+        android:id="@+id/scoreTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:text="Player Score: "
+        android:layout_below="@+id/computerCard2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:id="@+id/scoreTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scoreTextView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/scoreTextView2"
+        android:layout_marginTop="32dp"
+        android:text="Computer Score:" />
+
+    <ImageView
+        android:id="@+id/computerCard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_alignTop="@+id/computerCard2"
+        android:layout_alignLeft="@+id/playerCard3"
+        android:layout_alignStart="@+id/playerCard3" />
+
+    <ImageView
+        android:id="@+id/playerCard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignTop="@+id/playerCard2"
+        android:layout_toRightOf="@+id/playerCard2"
+        android:layout_toEndOf="@+id/playerCard2" />
+
+    <ImageView
+        android:id="@+id/computerCard4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_alignTop="@+id/computerCard3"
+        android:layout_toRightOf="@+id/computerCard3"
+        android:layout_toEndOf="@+id/computerCard3"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <ImageView
+        android:id="@+id/playerCard4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/computerCard4"
+        android:layout_alignStart="@+id/computerCard4"
+        android:layout_alignTop="@+id/playerCard3"
+        android:src="@drawable/back" />
+
+    <Button
+        android:id="@+id/gameLoop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playerCard1"
+        android:layout_alignStart="@+id/playerCard1"
+        android:layout_below="@+id/playerCard1"
+        android:onClick="gameLoop"
+        android:text="Start New Game" />
+
+    <TextView
+        android:id="@+id/playerScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignBaseline="@+id/scoreTextView2"
+        android:layout_alignBottom="@+id/scoreTextView2"
+        android:layout_toRightOf="@+id/scoreTextView1"
+        android:layout_toEndOf="@+id/scoreTextView1" />
+
+    <TextView
+        android:id="@+id/computerScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/scoreTextView1"
+        android:layout_alignBottom="@+id/scoreTextView1"
+        android:layout_alignRight="@+id/playerScoreTextView"
+        android:layout_alignEnd="@+id/playerScoreTextView" />
+
+</RelativeLayout>
